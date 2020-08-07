@@ -1,23 +1,27 @@
-<%if @article.errors.any? %>
-  <p><strong>ERRORS:</strong></p>
-  <ul>
-    <% @article.errors.full_messages.each do |msg|%>
-      <li><%= msg %></li>
-    <%end%>
-  </ul>
-<%end%>  
+<div class="container mt-1">
+  
+  <div class = "row justify-content-center text-white">
+    <div class = "col-10">
+      <%= render  "shared/errors" %>
+      <%= form_with(model: @article, class: "shadow p-3 mb-3 background rounded", local: true) do |f| %>
+      
+      <div class="form-group row ">   
+        <%= f.label :title, class: "col-2 col-form-label" %>
+        <div class="col-10">
+          <%= f.text_field :title, class: "form-control shadow rounded", placeholder: "Title" %>
+        </div>
+      </div>
 
-<%= form_with(model: @article, local: true) do |f| %>
-  <p>   
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  
-  </p>
-    <p>   
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  
-  </p>
-  <p><%=f.submit%></p>
-  <a href=<%= articles_path()%>>Articles</a>
-  <%end%>
+      <div class="form-group row">
+        <%= f.label :description, class: "col-2 col-form-label" %>
+        <div class="col-10">
+          <%= f.text_area :description, rows: 10, class: "form-control", id: "text-area", placeholder: "Description" %>
+        </div>
+      </div>
+        <div class="form-group row justify-content-center">
+          <%= f.submit :value => "Okay", class: "btn btn-secondary"  %>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

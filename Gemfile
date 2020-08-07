@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+
+# randumb is a ruby gem that allows you to easily pull random records from your database of choice.
+gem 'randumb'
+# Build a persistent domain model by mapping database tables to Ruby classes
+gem 'activerecord', '~> 6.0', '>= 6.0.3.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
