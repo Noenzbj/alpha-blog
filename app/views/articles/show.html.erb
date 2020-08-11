@@ -5,7 +5,7 @@
       <div class="col-8 mt-4">
         <div class="card text-center shadow mb-5 background rounded border border-warning">
           <div class="card-header font-italic navbar border-bottom-1">
-            by Artur Abramow
+            by <%= @article.user.username %>
           </div>
           <div class="card-body ">
             <div class="card-text text-left"><%= simple_format(@article.description) %></div>
