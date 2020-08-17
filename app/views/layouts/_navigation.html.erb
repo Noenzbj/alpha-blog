@@ -18,10 +18,11 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            Users
           </a>
           <div class="dropdown-menu   background" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
+            
+            <%= link_to  "Show all users", users_path(), class: "dropdown-item"%>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>

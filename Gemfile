@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
-
 # randumb is a ruby gem that allows you to easily pull random records from your database of choice.
 gem 'randumb'
 # Build a persistent domain model by mapping database tables to Ruby classes
