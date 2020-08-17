@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+# will_paginate provides a simple API for performing paginated queries with Active Record
+gem 'will_paginate', '~> 3.1'
 # randumb is a ruby gem that allows you to easily pull random records from your database of choice.
 gem 'randumb'
 # Build a persistent domain model by mapping database tables to Ruby classes

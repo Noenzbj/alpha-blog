@@ -3,9 +3,10 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-8 mt-4">
-        <div class="card text-center shadow mb-5 background rounded border border-warning">
-          <div class="card-header font-italic navbar border-bottom-1">
-            by <%= @article.user.username %>
+        <div class="card text-center shadow mb-5 bg-white rounded">
+          <div class="card-header font-italic border-bottom-1">
+            by <%= link_to @article.user.username, user_path(@article.user) if @article.user %>
+            <%= link_to  (gravatar_for @article.user, size: 100), user_path(@article.user)%>
           </div>
           <div class="card-body ">
             <div class="card-text text-left"><%= simple_format(@article.description) %></div>
@@ -14,7 +15,7 @@
             <%= link_to "Edit", edit_article_path(@article), class: "btn btn-secondary" %>
             </div>
           </div>
-          <div class="card-footer text-muted navbar">
+          <div class="card-footer text-muted">
             <small>Created <%= time_ago_in_words(@article.created_at) %> ago, 
             edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
           </div>
