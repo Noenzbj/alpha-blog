@@ -27,7 +27,7 @@
         </div>
       </div>
         <div class="form-group row justify-content-center">
-          <%= f.submit :value => "Okay", class: "btn btn-secondary"  %>
+          <%= f.submit(@article.new_record? ? "Create" : "Update", class: "btn btn-secondary") %>
         </div>
       <%end%>
     </div>
